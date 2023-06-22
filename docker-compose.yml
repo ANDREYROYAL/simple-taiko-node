@@ -74,9 +74,9 @@ services:
     <<: *logging
 
   taiko_client_prover_relayer:
-    image: gcr.io/evmchain/taiko-client:grimsvotn
+    image: taiko-modif:latest
     restart: unless-stopped
-    pull_policy: always
+    pull_policy: never
     depends_on:
       - l2_execution_engine
       - taiko_client_driver
